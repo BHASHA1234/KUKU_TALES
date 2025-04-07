@@ -1,0 +1,9 @@
+google-generativeai
+chromadb
+networkx
+python-dotenv
+gTTS
+openai
+requests
+streamlit # <<<--- REQUIRED
+# Remove Flask if not needed

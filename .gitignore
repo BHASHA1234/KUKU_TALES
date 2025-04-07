@@ -1,0 +1,157 @@
+# --- Secrets ---
+.env
+
+# --- Python Virtual Environment ---
+venv/
+.venv/
+env/
+
+# --- Python Cache ---
+*.pyc
+__pycache__/
+
+# --- Database ---
+chroma_story_db/
+*.db
+*.sqlite*
+
+# --- Generated Output & Data ---
+chapter_*.txt
+full_story.txt
+final_knowledge_graph.json
+final_pipeline_state.json
+story_outline_confirmed.json
+story_outline_rejected.json
+story_seed.json
+*.mp3
+# Handle images carefully - see note below
+generated_book_cover.png # Example if you generate this specific file
+book_cover.png           # Example if you generate this specific file
+
+# --- IDE / OS Files ---
+.DS_Store
+.vscode/
+.idea/
+
+# --- Streamlit ---
+.streamlit/
+
+# --- Optional: Ignore all PNGs if NONE are source code ---
+# *.png
+
+# --- Optional: Ignore the whole images folder ---
+# images/
+
+# --- Optional: Ignore potentially unused files ---
+# story_pipeline.py# --- Secrets ---
+# Ignore the file containing API keys (VERY IMPORTANT!)
+.env
+
+# --- Python Virtual Environment ---
+# Ignore the virtual environment directory (it's huge and specific to your machine)
+venv/
+.venv/
+env/
+
+# Ignore Python compiled files and caches
+*.pyc
+__pycache__/
+
+# --- Database Files ---
+# Ignore the ChromaDB persistent storage folder
+chroma_story_db/
+# Ignore other common DB file types just in case
+*.db
+*.sqlite
+*.sqlite3
+
+# --- Generated Output & Data Files ---
+# Ignore specific generated text files we saw before
+chapter_*.txt
+full_story.txt
+
+# Ignore specific generated JSON files we saw before
+final_knowledge_graph.json
+final_pipeline_state.json
+story_outline_confirmed.json
+story_outline_rejected.json
+story_seed.json
+# You could use *.json, but listing them is safer if you might add source JSON later
+
+# Ignore generated media files
+*.mp3
+*.png  # Note: This will ignore ALL PNGs. See next section for images/
+*.jpg
+*.jpeg
+
+# --- IDE / OS Files ---
+# Ignore macOS system files
+.DS_Store
+# Ignore VS Code configuration folder
+.vscode/
+# Ignore PyCharm/IntelliJ configuration folder
+.idea/
+
+# --- Streamlit ---
+# Ignore Streamlit's internal configuration/cache folder
+.streamlit/
+
+# --- Specific Handling for 'images' Directory ---
+# If your images/ directory *only* contains source assets like 'kukutales_logo.png'
+# that you *want* in Git, then the *.png rule above might be too broad.
+# In that case, DELETE the '*.png' line above and instead add these lines:
+# # Ignore specific generated image files (if they exist)
+# generated_book_cover.png
+# book_cover.png
+# -- OR --
+# If your images/ directory ONLY contains generated images you DON'T want in Git,
+# uncomment the next line to ignore the whole folder:
+# images/
+
+# --- Potentially Unused Files ---
+# If 'story_pipeline.py' is an OLD file and NOT part of your current app,
+# uncomment the next line to ignore it. Otherwise, leave it commented to track it.
+# story_pipeline.py# --- Secrets ---
+# Ignore the file containing API keys
+.env
+
+# --- Python Virtual Environment ---
+# Common virtual environment folder names
+venv/
+.venv/
+env/
+# Python cache files
+*.pyc
+__pycache__/
+
+# --- IDE/OS Specific Files ---
+# macOS specific
+.DS_Store
+# VS Code specific
+.vscode/
+# PyCharm specific
+.idea/
+
+# --- Database Files ---
+# Ignore the persistent ChromaDB storage folder
+chroma_story_db/
+# Ignore common database file types just in case
+*.db
+*.sqlite
+*.sqlite3
+
+# --- Generated Output Files ---
+# Ignore generated audio, images, and text files
+*.mp3
+*.png
+*.jpg
+*.jpeg
+# Be careful with *.txt if you have essential source text files.
+# If so, list specific generated files instead:
+# generated_story_gtts.mp3
+# generated_book_cover.png
+# full_story.txt
+# chapter_*.txt
+
+# --- Streamlit Cache/Config ---
+.streamlit/
